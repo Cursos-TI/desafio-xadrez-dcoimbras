@@ -6,32 +6,39 @@ int main(){
  rainha: mova o Rainha 8 casas sentido esquerda usando laço  do while
   */
 
- int i =1;
+  int i, j;
 
-printf("***XADRES***\n");
-printf("Movendo a TORRE \n");
+  printf("***XADRES***\n");
+  printf("Movendo a TORRE \n");
 
-    for (int i = 1; i <=5; i++) // Estamos movendo a torre para frente  5 casas.
-    {
-    printf("FRENTE\n");
-    }
+  for (i = 1; i <= 5; i++) {
+      printf("FRENTE\n");
+  }
 
-printf("Movendo o BISPO\n"); 
+  i = 1; // Reinicializa i para o loop do bispo
+  printf("Movendo o BISPO\n"); 
 
-    while (i <=5)
-    {
-    printf("FRENTE E DIREITA\n"); // Estamos movendo o Bisbo  em diagonal sentido frente direita  5 casas.
-    i++;
-    }
-    
+  while (i <= 5) {
+      printf("FRENTE E DIREITA\n"); // Movendo o Bispo em diagonal sentido frente direita 5 casas.
+      i++;
+  }
+  
+  i = 1; // Reinicializa i para o loop da Rainha
+  printf("Movendo a Rainha\n");
 
-i=1;
-printf("Movendo a Rainha\n");
+  do {
+      printf("ESQUERDA\n");
+      i++;
+  } while (i <= 8); // Movendo a Rainha 8 casas para esquerda.
 
-do{
-    printf("ESQUERDA\n");
-    i++;
-  } while (i <=8); // Estamos movendo a Rainha 8 casas para esquerda.
+  printf("Movendo o CAVALO \n"); // APARTIR DA LINHA 34 ESTA SENDO INCLUIDO O MOVIMENTO DO CAVALO.
 
-    return 0;
+  for (i = 1; i <= 2; i++) { // Loop externo do cavalo
+      for (j = 1; j <= 1; j++) { // Loop interno do cavalo
+          printf("CIMA \n"); // A cada teste do loop, o cavalo anda para frente
+      }
+  }
+  printf("DIREITA \n"); // No final, o cavalo vira para direita
+  
+  return 0;
 }
